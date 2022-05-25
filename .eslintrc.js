@@ -5,7 +5,7 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:vue/essential',
+    'plugin:vue/vue3-essential',
     'airbnb-base',
     'plugin:prettier/recommended' // 添加 prettier 插件  解决eslint和pritter的冲突
   ],
