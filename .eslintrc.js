@@ -18,6 +18,7 @@ module.exports = {
   rules: {
     'vue/multi-word-component-names': 'off',
     'import/no-unresolved': 'off',
-    'import/extensions': 'off'
+    'import/extensions': 'off',
+    'no-unused-vars': 'off'
   }
 }

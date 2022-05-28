@@ -1,9 +1,11 @@
 <template>
-  <div>
-    导航栏 |
-    <router-link to="/">Home</router-link>|
-    <router-link to="/my">My</router-link>
-  </div>
-  <hr />
   <router-view></router-view>
 </template>
+
+<style lang="scss" scoped></style>
+<script lang="ts" setup>
+import { ref, provide } from 'vue'
+
+const asideVisible = ref(false)
+provide('asideVisible', asideVisible)
+</script>
