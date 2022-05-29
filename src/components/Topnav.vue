@@ -1,11 +1,9 @@
 @@ -1,19 +1,21 @@
 <template>
   <div class="topnav">
-    <a class="ui-logo" @click="toggleAside">
-      <img src="" alt="" />
-      <span>dd ui</span>
-    </a>
-    <div class="right-wrapper">
+    <img class="toggle-aside" src="@/assets/svg/list.svg" @click="toggleAside" />
+    <div class="logo"></div>
+    <div class="menu">
       <router-link to="/">首页</router-link>
       <router-link to="/doc">文档</router-link>
       <a href="https://github.com/coderyjw/jw-ui" target="_blank">GitHub</a>
@@ -33,22 +31,27 @@ const toggleAside = () => {
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 1px rgb(239, 239, 245);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 10;
 
-  .ui-logo {
+  .logo {
+    height: 28px;
     span {
       color: rgb(31, 34, 37);
       cursor: pointer;
       font-size: 18px;
-      line-height: 28.8px;
+      line-height: 28px;
+      height: 28px;
     }
     &:hover {
       border-bottom: none;
     }
   }
 
-  .right-wrapper {
+  .menu {
     a {
       display: inline-block;
       text-decoration: none;
@@ -70,6 +73,20 @@ const toggleAside = () => {
     span {
       color: rgb(51, 54, 57);
       font-size: 14px;
+    }
+  }
+  .toggle-aside {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: none;
+  }
+  @media (max-width: 500px) {
+    > .menu {
+      display: none;
+    }
+    > .logo {
+      margin: 0 auto;
     }
   }
 }
