@@ -1,7 +1,16 @@
 <template>
   <div class="topnav">
-    <img class="toggle-aside" src="../assets/logo.png" @click="toggleAside" />
-    <div class="logo"></div>
+    <img
+      class="toggle-aside"
+      v-if="toggleMenuButton"
+      src="../assets/logo.png"
+      @click="toggleAside"
+    />
+    <div class="logo" @click="getStart">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-leaf"></use>
+      </svg>
+    </div>
     <div class="menu">
       <router-link to="/">首页</router-link>
       <router-link to="/doc">文档</router-link>
@@ -13,6 +22,21 @@
 
 <script setup lang="ts">
 import { type Ref, inject } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const props = defineProps({
+  toggleMenuButton: {
+    type: Boolean,
+    default: true
+  }
+})
+
+const getStart = () => {
+  router.push({
+    path: '/doc'
+  })
+}
 
 const asideVisible = inject<Ref<boolean>>('asideVisible')
 
@@ -37,8 +61,16 @@ const toggleAside = () => {
   z-index: 10;
 
   .logo {
-    height: 28px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    > svg {
+      width: 32px;
+      height: 32px;
+    }
     span {
+      margin-left: 10px;
       color: rgb(31, 34, 37);
       cursor: pointer;
       font-size: 18px;
