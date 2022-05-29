@@ -1,7 +1,6 @@
-@@ -1,19 +1,21 @@
 <template>
   <div class="topnav">
-    <img class="toggle-aside" src="@/assets/svg/list.svg" @click="toggleAside" />
+    <img class="toggle-aside" src="../assets/logo.png" @click="toggleAside" />
     <div class="logo"></div>
     <div class="menu">
       <router-link to="/">首页</router-link>

@@ -16,6 +16,18 @@ const router = createRouter({
         {
           path: 'switch',
           component: Switch
+        },
+        {
+          path: 'button',
+          component: Switch
+        },
+        {
+          path: 'dialog',
+          component: Switch
+        },
+        {
+          path: 'tabs',
+          component: Switch
         }
       ]
     }
