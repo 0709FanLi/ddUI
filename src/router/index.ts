@@ -8,7 +8,6 @@ import Button from '@/components/ButtonDemo.vue'
 import Markdown from '@/components/Markdown.vue'
 
 const md = (filename: string) => {
-  console.log('filename', h(Markdown, { path: `../../markdown/${filename}.md`, key: filename }))
   return h(Markdown, { path: `../../markdown/${filename}.md`, key: filename })
 }
 

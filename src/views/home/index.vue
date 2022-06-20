@@ -2,7 +2,7 @@
   <div class="topnavAndBanner">
     <Topnav :toggleMenuButton="false" />
     <div class="banner">
-      <h1>JW UI</h1>
+      <h1>DD UI</h1>
       <p>一个 Vue 3 组件库</p>
       <div class="actions">
         <Button @click="linkTo('github')">GitHub</Button>
@@ -25,7 +25,7 @@
           <use xlink:href="#icon-ts"></use>
         </svg>
         <h3>基于 TypeScript</h3>
-        <p>源代码采用 TypeScript 书写）</p>
+        <p>源代码采用 TypeScript 书写</p>
       </li>
       <li>
         <svg>
@@ -47,7 +47,7 @@ const router = useRouter()
 
 const linkTo = (params: string): void => {
   if (params === 'github') {
-    window.open('https://github.com/coderyjw/jw-ui', '_blank')
+    window.open('https://github.com/0709FanLi/ddUI', '_blank')
   } else if (params === 'getStart') {
     router.push({
       path: '/doc'
