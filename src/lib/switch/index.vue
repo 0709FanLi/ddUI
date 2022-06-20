@@ -1,18 +1,16 @@
 <template>
-  <div>
-    <button
-      class="dd-switch"
-      :class="{ checked: modelValue }"
-      @click="toggle"
-      :style="{ background: modelValue ? inactiveColor : activeColor }"
-    >
-      <span></span>
-    </button>
-  </div>
+  <button
+    class="dd-switch"
+    :class="classes"
+    @click="toggle"
+    :style="{ background: modelValue ? activeColor : inactiveColor }"
+  >
+    <span></span>
+  </button>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, toRefs } from 'vue'
 
 const props = defineProps({
   modelValue: {
@@ -26,62 +24,159 @@ const props = defineProps({
   inactiveColor: {
     type: String,
     default: '#dbdbdb'
+  },
+  disabled: {
+    type: Boolean,
+    default: false
+  },
+  size: {
+    type: String,
+    default: 'default'
   }
 })
 
 const emit = defineEmits(['update:modelValue'])
 
-const checked = ref(false)
 const toggle = () => {
+  if (props.disabled) {
+    return
+  }
   emit('update:modelValue', !props.modelValue)
+}
+const { modelValue, disabled, size } = toRefs(props)
+
+const classes = computed(() => {
+  return {
+    [`dd-switch-checked`]: modelValue.value,
+    [`dd-switch-disabled`]: disabled.value,
+    [`dd-switch-${size.value}`]: size.value
+  }
+})
+</script>
+<script lang="ts">
+export default {
+  name: 'DdSwitch'
 }
 </script>
 
 <style lang="scss" scoped>
-$h: 22px;
-$h2: $h - 4px;
+$default-h: 22px;
+$default-h-2: $default-h - 4px;
+
+$small-h: 16px;
+$small-h-2: $small-h - 4px;
+
+$large-h: 30px;
+$large-h-2: $large-h - 4px;
+
+$inactive-color: #dbdbdb;
+$active-color: #18a058;
 .dd-switch {
-  height: $h;
-  width: $h * 2;
+  height: $default-h;
+  width: $default-h * 2;
   border: none;
-  background: #dbdbdb;
-  border-radius: calc($h2 / 1.5);
+  background: $inactive-color;
+  border-radius: calc($default-h-2 / 1.5);
   position: relative;
-  cursor: pointer; //解决移动端点击时有边框
+  cursor: pointer;
+  /* 解决移动端点击时有边框 */
   outline: none;
   -webkit-tap-highlight-color: #fff;
   -webkit-tap-highlight-color: transparent;
 
-  > span {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    height: $h2;
-    width: $h2;
-    background: white;
-    border-radius: calc($h2 / 1.5);
-    transition: all 250ms;
-  }
-
-  &.dd-checked {
-    background: #18a058;
-    > span {
-      left: calc(100% - $h2 - 2px);
-    }
+  &-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
   &:focus {
     outline: none;
   }
 
-  &:active {
+  > span {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: $default-h-2;
+    width: $default-h-2;
+    background: white;
+    border-radius: calc($default-h-2 / 1.5);
+    transition: all 250ms;
+  }
+
+  &.dd-switch-checked {
+    background: $active-color;
     > span {
-      width: $h2 + 4px;
+      left: calc(100% - $default-h-2 - 2px);
+    }
+    &.dd-switch-small > span {
+      left: calc(100% - $small-h-2 - 2px);
+    }
+
+    &.dd-switch-large > span {
+      left: calc(100% - $large-h-2 - 2px);
     }
   }
-  &.dd-checked:active {
+
+  &:active {
     > span {
-      width: $h2 + 4px;
+      width: $default-h-2 + 4px;
+    }
+
+    &.dd-switch-small > span {
+      width: $small-h-2 + 4px;
+    }
+
+    &.dd-switch-large > span {
+      width: $large-h-2 + 4px;
+    }
+  }
+  &.dd-switch-checked:active {
+    > span {
+      width: $default-h-2 + 4px;
       margin-left: -4px;
+    }
+    &.dd-switch-small > span {
+      width: $small-h-2 + 4px;
+      margin-left: -4px;
+    }
+
+    &.dd-switch-large > span {
+      width: $large-h-2 + 4px;
+      margin-left: -4px;
+    }
+  }
+
+  &.dd-switch-small {
+    height: $small-h;
+    width: $small-h * 2;
+    border-radius: calc($small-h-2 / 1.5);
+
+    > span {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      height: $small-h-2;
+      width: $small-h-2;
+      background: white;
+      border-radius: calc($small-h-2 / 1.5);
+      transition: all 250ms;
+    }
+  }
+
+  &.dd-switch-large {
+    height: $large-h;
+    width: $large-h * 2;
+    border-radius: calc($large-h-2 / 1.5);
+
+    > span {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      height: $large-h-2;
+      width: $large-h-2;
+      background: white;
+      border-radius: calc($large-h-2 / 1.5);
+      transition: all 250ms;
     }
   }
 }

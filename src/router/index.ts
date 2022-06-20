@@ -2,7 +2,7 @@ import { h } from 'vue'
 import { createWebHistory, createRouter } from 'vue-router'
 import Home from '@/views/home/index.vue'
 import Doc from '@/views/doc/index.vue'
-import Switch from '@/components/SwitchDemo.vue'
+import SwitchDoc from '@/views/doc/switch/index.vue'
 import ButtonDoc from '@/views/doc/button/index.vue'
 
 import Markdown from '@/components/Markdown.vue'
@@ -19,6 +19,7 @@ const router = createRouter({
     { path: '/home', component: Home },
     {
       path: '/doc',
+      // redirect: '/doc/intro',
       component: Doc,
       children: [
         { path: 'intro', component: md('intro') },
@@ -26,7 +27,7 @@ const router = createRouter({
         { path: 'get-started', component: md('get-started') },
         {
           path: 'switch',
-          component: Switch
+          component: SwitchDoc
         },
         {
           path: 'button',
