@@ -10,10 +10,11 @@ const mdPlugin = require('vite-plugin-markdown')
 const vitePluginVue = {
   name: 'demo',
   transform(code, id) {
-    if (!/vue&type=demo/.test(id)) {
+    if (!/\/src\/views\/doc\/.*\.demo\.vue/.test(id) || !/vue&type=demo/.test(id)) {
       return ''
     }
-    const file = fs.readFileSync('./src/components/Button1.demo.vue').toString()
+    const pathUrl = `.${id.match(/\/src\/views\/doc\/.*\.demo\.vue/)[0]}`
+    const file = fs.readFileSync(pathUrl).toString()
     const parsed: any = baseParse(file).children.find((n: any) => n.tag === 'demo')
     const title = parsed.children[0].content
     const main = file.split(parsed.loc.source).join('').trim()

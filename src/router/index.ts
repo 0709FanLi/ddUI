@@ -3,7 +3,7 @@ import { createWebHistory, createRouter } from 'vue-router'
 import Home from '@/views/home/index.vue'
 import Doc from '@/views/doc/index.vue'
 import Switch from '@/components/SwitchDemo.vue'
-import Button from '@/components/ButtonDemo.vue'
+import ButtonDoc from '@/views/doc/button/index.vue'
 
 import Markdown from '@/components/Markdown.vue'
 
@@ -30,7 +30,7 @@ const router = createRouter({
         },
         {
           path: 'button',
-          component: Button
+          component: ButtonDoc
         }
       ]
     }
