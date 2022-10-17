@@ -12,11 +12,12 @@
     size="small"
     style="width: 180px"
   />
-  <jw-button v-else size="small" @click="showInput"> + New Tag </jw-button>
+  <Button v-else size="small" @click="showInput"> + New Tag </Button>
 </template>
 <script setup lang="ts">
 import { ref, nextTick, onMounted } from 'vue'
 import Tag from '@/lib/tag/index.vue'
+import Button from '@/lib/button/index.vue'
 
 const dynamicTags = ref(['Tag 1', 'Tag 2', 'Tag 3'])
 const inputVisible = ref(false)

@@ -18,6 +18,9 @@
             <router-link class="menu-item text-overflow" to="/doc/button">Button 按钮</router-link>
             <router-link class="menu-item text-overflow" to="/doc/avatar">头像 Avator</router-link>
             <router-link class="menu-item text-overflow" to="/doc/tag">标签 Tag</router-link>
+            <router-link class="menu-item text-overflow" to="/doc/ellipsis"
+              >省略 ellipsis</router-link
+            >
           </div>
         </div>
       </aside>

@@ -6,6 +6,7 @@ import SwitchDoc from '@/views/doc/switch/index.vue'
 import ButtonDoc from '@/views/doc/button/index.vue'
 import AvatorDoc from '@/views/doc/avatar/index.vue'
 import TagDoc from '@/views/doc/tag/index.vue'
+import EllipsisDoc from '@/views/doc/ellipsis/index.vue'
 
 import Markdown from '@/components/Markdown.vue'
 
@@ -42,6 +43,10 @@ const router = createRouter({
         {
           path: 'tag',
           component: TagDoc
+        },
+        {
+          path: 'ellipsis',
+          component: EllipsisDoc
         }
       ]
     }
