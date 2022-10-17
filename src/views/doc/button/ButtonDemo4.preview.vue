@@ -1,4 +1,4 @@
-<demo>加载</demo>
+<preview>加载</preview>
 <template>
   <Button theme="default" loading>loading</Button>
   <Button theme="primary" loading>loading</Button>

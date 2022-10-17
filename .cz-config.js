@@ -73,13 +73,13 @@ module.exports = {
     customScope: '请输入自定义的 scope：',
     subject: '填写简短精炼的变更描述：\n',
     body: '填写更加详细的变更描述（可选）。使用 "|" 换行：\n',
-    breaking: '列举非兼容性重大的变更（可选）：\n',
+    breaDD: '列举非兼容性重大的变更（可选）：\n',
     footer: '列举出所有变更的 ISSUES CLOSED（可选）。 例如: #31, #34：\n',
     confirmCommit: '确认提交？'
   },
 
-  // 设置只有 type 选择了 feat 或 fix，才询问 breaking message
-  allowBreakingChanges: ['feat', 'fix'],
+  // 设置只有 type 选择了 feat 或 fix，才询问 breaDD message
+  allowBreaDDChanges: ['feat', 'fix'],
 
   // 跳过要询问的步骤
   // skipQuestions: ['body', 'footer'],
@@ -88,5 +88,5 @@ module.exports = {
   subjectLimit: 100,
   breaklineChar: '|' // 支持 body 和 footer
   // footerPrefix : 'ISSUES CLOSED:'
-  // askForBreakingChangeFirst : true,
+  // askForBreaDDChangeFirst : true,
 }

@@ -16,9 +16,7 @@
             <span class="menu-group-title text-overflow"> 通用组件 (4) </span>
             <router-link class="menu-item text-overflow" to="/doc/switch">Switch 开关</router-link>
             <router-link class="menu-item text-overflow" to="/doc/button">Button 按钮</router-link>
-            <router-link class="menu-item text-overflow" to="/doc/dialog"
-              >Dialog 对话框</router-link
-            >
+            <router-link class="menu-item text-overflow" to="/doc/avatar">头像 Avator</router-link>
             <router-link class="menu-item text-overflow" to="/doc/tabs">Tabs 标签页</router-link>
           </div>
         </div>

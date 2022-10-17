@@ -1,6 +1,6 @@
-<demo>
+<preview>
 尺寸
-</demo>
+</preview>
 <template>
   <Switch v-model="checked" size="small" />
   <Switch v-model="checked" size="default" />

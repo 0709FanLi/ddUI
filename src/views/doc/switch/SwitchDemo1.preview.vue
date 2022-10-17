@@ -1,8 +1,9 @@
-<demo>
-自定义颜色
-</demo>
+<preview>
+基础用法
+</preview>
 <template>
-  <Switch v-model="checked" active-color="red" inactive-color="pink" />
+  <Switch v-model="checked" />
+  <Switch v-model="checked" disabled />
 </template>
 
 <script setup lang="ts">

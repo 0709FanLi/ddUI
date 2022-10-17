@@ -1,4 +1,4 @@
-<demo>基础</demo>
+<preview>基础</preview>
 <template>
   <Button theme="default" dashed />
   <Button theme="primary" dashed />

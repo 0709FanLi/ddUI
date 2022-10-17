@@ -4,6 +4,7 @@ import Home from '@/views/home/index.vue'
 import Doc from '@/views/doc/index.vue'
 import SwitchDoc from '@/views/doc/switch/index.vue'
 import ButtonDoc from '@/views/doc/button/index.vue'
+import AvatorDoc from '@/views/doc/avatar/index.vue'
 
 import Markdown from '@/components/Markdown.vue'
 
@@ -32,6 +33,10 @@ const router = createRouter({
         {
           path: 'button',
           component: ButtonDoc
+        },
+        {
+          path: 'avatar',
+          component: AvatorDoc
         }
       ]
     }
