@@ -5,6 +5,7 @@ import Doc from '@/views/doc/index.vue'
 import SwitchDoc from '@/views/doc/switch/index.vue'
 import ButtonDoc from '@/views/doc/button/index.vue'
 import AvatorDoc from '@/views/doc/avatar/index.vue'
+import TagDoc from '@/views/doc/tag/index.vue'
 
 import Markdown from '@/components/Markdown.vue'
 
@@ -37,6 +38,10 @@ const router = createRouter({
         {
           path: 'avatar',
           component: AvatorDoc
+        },
+        {
+          path: 'tag',
+          component: TagDoc
         }
       ]
     }

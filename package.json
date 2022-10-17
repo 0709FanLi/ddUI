@@ -9,6 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vicons/antd": "^0.11.0",
+    "@vicons/carbon": "^0.11.0",
+    "@vicons/fa": "^0.11.0",
+    "@vicons/fluent": "^0.11.0",
+    "@vicons/ionicons4": "^0.11.0",
+    "@vicons/ionicons5": "^0.11.0",
+    "@vicons/material": "^0.11.0",
+    "@vicons/tabler": "^0.11.0",
+    "@vicons/utils": "^0.1.4",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/compiler-core": "^3.2.37",
     "github-markdown-css": "^5.1.0",

@@ -17,7 +17,7 @@
             <router-link class="menu-item text-overflow" to="/doc/switch">Switch 开关</router-link>
             <router-link class="menu-item text-overflow" to="/doc/button">Button 按钮</router-link>
             <router-link class="menu-item text-overflow" to="/doc/avatar">头像 Avator</router-link>
-            <router-link class="menu-item text-overflow" to="/doc/tabs">Tabs 标签页</router-link>
+            <router-link class="menu-item text-overflow" to="/doc/tag">标签 Tag</router-link>
           </div>
         </div>
       </aside>
