@@ -5,9 +5,9 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:vue/vue3-essential',
+    'plugin:vue/essential',
     'airbnb-base',
-    'plugin:prettier/recommended' // 添加 prettier 插件  解决eslint和pritter的冲突
+    'plugin:prettier/recommended' // 添加 prettier 插件
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -15,10 +15,5 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['vue', '@typescript-eslint'],
-  rules: {
-    'vue/multi-word-component-names': 'off',
-    'import/no-unresolved': 'off',
-    'import/extensions': 'off',
-    'no-unused-vars': 'off'
-  }
+  rules: {}
 }
