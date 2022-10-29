@@ -1,9 +1,7 @@
 <preview>颜色</preview>
 <template>
-  <Tag :color="{ color: '#BBB', backgroundColor: '#5555555', borderColor: '#555' }"
+  <dd-tag :color="{ color: '#BBB', backgroundColor: '#5555555', borderColor: '#555' }"
     >告别夜晚 等待天亮
-  </Tag>
+  </dd-tag>
 </template>
-<script setup lang="ts">
-import Tag from '@/lib/tag/index.vue'
-</script>
+<script setup lang="ts"></script>

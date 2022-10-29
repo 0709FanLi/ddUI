@@ -25,7 +25,7 @@
         </div>
       </aside>
       <div class="toggle-button" @click="toggleAside" :style="toggleAsidStyle">
-        <img src="@/assets/svg/箭头 右.svg" alt="" />
+        <img src="@/assets/svg/right-arrow.svg" alt="" />
       </div>
       <main :style="mainStyle">
         <router-view />

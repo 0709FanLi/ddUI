@@ -1,10 +1,9 @@
 <preview>可关闭</preview>
 <template>
-  <Tag v-for="tag in tags" :key="tag.name" :type="tag.type" closeable>{{ tag.name }}</Tag>
+  <dd-tag v-for="tag in tags" :key="tag.name" :type="tag.type" closeable>{{ tag.name }}</dd-tag>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
-import Tag from '@/lib/tag/index.vue'
 
 const tags = ref([
   { name: 'Tag 1', type: '' },

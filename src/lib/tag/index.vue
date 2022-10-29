@@ -1,17 +1,13 @@
 <template>
-  <div class="jw-tag" :class="classes" :style="style">
-    <jw-ellipsis>
+  <div class="dd-tag" :class="classes" :style="style">
+    <dd-ellipsis>
       <slot></slot>
-    </jw-ellipsis>
-    <jw-icon :size="18" v-if="closeable" @click="handleClose">
-      <Close />
-    </jw-icon>
+    </dd-ellipsis>
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { Close } from '@vicons/ionicons5'
 
 const props = defineProps({
   type: {
@@ -54,12 +50,12 @@ const handleClose = () => {
 </script>
 <script lang="ts">
 export default {
-  name: 'JwTag'
+  name: 'DdTag'
 }
 </script>
 
 <style scoped lang="scss">
-.jw-tag {
+.dd-tag {
   white-space: nowrap;
   position: relative;
   box-sizing: border-box;
@@ -123,7 +119,7 @@ export default {
     line-height: 16px;
   }
 
-  .jw-icon {
+  .dd-icon {
     cursor: pointer;
   }
 

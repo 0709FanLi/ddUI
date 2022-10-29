@@ -1,13 +1,10 @@
 <preview>基础</preview>
 <template>
-  <Button theme="default" round />
-  <Button theme="primary" round />
-  <Button theme="info" round />
-  <Button theme="success" round />
-  <Button theme="warning" round />
-  <Button theme="error" round />
+  <dd-button theme="default" round />
+  <dd-button theme="primary" round />
+  <dd-button theme="info" round />
+  <dd-button theme="success" round />
+  <dd-button theme="warning" round />
+  <dd-button theme="error" round />
 </template>
-
-<script setup lang="ts">
-import Button from '@/lib/button/index.vue'
-</script>
+<script setup lang="ts"></script>

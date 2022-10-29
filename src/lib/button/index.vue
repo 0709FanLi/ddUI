@@ -1,5 +1,5 @@
 <template>
-  <button class="dd-button" :class="classes">
+  <button class="dd-button-set" :class="classes">
     <span v-if="loading" class="dd-loadingIndicator"></span>
     <slot> {{ theme }} </slot>
   </button>
@@ -47,6 +47,11 @@ const classes = computed(() => {
   }
 })
 </script>
+<script lang="ts">
+export default {
+  name: 'DdButton'
+}
+</script>
 
 <style lang="scss" scoped>
 $h-default: 32px;
@@ -66,7 +71,7 @@ $default-border-color: #d9d9d9;
 $radius: 3px;
 $green: #18a058;
 
-.dd-button {
+.dd-button-set {
   box-sizing: border-box;
   height: $h-default;
   background-color: #fff;
