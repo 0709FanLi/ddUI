@@ -10,7 +10,7 @@ export { DdSwitch, DdButton, DdTag, DdAvatar, DdEllipsis }
 const components = [DdSwitch, DdButton, DdTag, DdAvatar, DdEllipsis]
 
 function registerDdUi(app: App): void {
-  console.log('DdButton', DdButton)
+  console.log('DdButton-------', DdButton)
 
   // eslint-disable-next-line array-callback-return
   components.map((component) => {

@@ -11,6 +11,7 @@ import resolve from 'rollup-plugin-node-resolve'
 
 export default {
   input: 'src/lib/index.ts',
+  external: ['vue'], //  不把vue vue-router打包进去
   output: [
     {
       globals: {

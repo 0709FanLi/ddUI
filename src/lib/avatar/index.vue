@@ -34,7 +34,7 @@ const props = defineProps({
 
 const emits = defineEmits(['error'])
 
-const hasLoadError = ref(false)
+const hasLoadError = ref<boolean>(false)
 // eslint-disable-next-line vue/no-setup-props-destructure
 const { size, shape, color, backgroundColor } = props
 const classes = computed(() => {
