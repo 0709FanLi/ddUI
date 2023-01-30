@@ -8,6 +8,7 @@ import { terser } from 'rollup-plugin-terser'
 import alias from '@rollup/plugin-alias'
 import path from 'path'
 import resolve from 'rollup-plugin-node-resolve'
+import typescript from 'rollup-plugin-typescript2'
 
 export default {
   input: 'src/lib/index.ts',
@@ -49,6 +50,7 @@ export default {
           })
         }
       ]
-    })
+    }),
+    typescript()
   ]
 }

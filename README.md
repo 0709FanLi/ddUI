@@ -12,3 +12,11 @@
 ## 4. 适合自己的才是最好的
 
 npx prettier --write . 格式化代码
+
+## 5. 发布
+
+rollup -c
+npm version v++
+npm publish
+
+发布后 几分钟即可下载新的包

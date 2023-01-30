@@ -42,15 +42,19 @@
     "lint-staged": "^13.0.3",
     "marked": "^4.0.9",
     "prettier": "^2.7.1",
+    "rollup": "^1.26.3",
     "rollup-plugin-dts": "^5.0.0",
     "rollup-plugin-esbuild": "^4.8.2",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
     "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.47.0",
-    "vue": "^3.2.25",
-    "vite": "^2.7.2"
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3",
+    "vite": "^2.7.2",
+    "vue": "^3.2.25"
   },
   "config": {
     "commitizen": {
